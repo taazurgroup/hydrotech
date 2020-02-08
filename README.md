@@ -1,2 +1,7 @@
-# hydrotech
-Hydrotech ERP Customization
+## Hydrotech
+
+Hydrotech erp customization
+
+#### License
+
+MIT

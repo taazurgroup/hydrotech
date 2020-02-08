@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include hydrotech *.css
+recursive-include hydrotech *.csv
+recursive-include hydrotech *.html
+recursive-include hydrotech *.ico
+recursive-include hydrotech *.js
+recursive-include hydrotech *.json
+recursive-include hydrotech *.md
+recursive-include hydrotech *.png
+recursive-include hydrotech *.py
+recursive-include hydrotech *.svg
+recursive-include hydrotech *.txt
+recursive-exclude hydrotech *.pyc
