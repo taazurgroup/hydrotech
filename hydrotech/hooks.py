@@ -126,4 +126,11 @@ app_license = "MIT"
 # override_doctype_dashboards = {
 # 	"Task": "hydrotech.task.get_dashboard_data"
 # }
-
+fixtures = ["Custom Field",
+            "Custom Script",
+            "Print Format",
+            "Report",
+            "Letter Head",
+            "Workflow",
+            "Workflow State"
+            ]
