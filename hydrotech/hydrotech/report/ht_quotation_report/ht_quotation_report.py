@@ -10,9 +10,9 @@ from frappe import _
 from frappe.utils import flt, getdate
 
 def execute(filters=None):
-	columns, data = [], []
-	columns=get_columns()
-	data=get_data(filters)
+        columns, data = [], []
+        columns=get_columns()
+        data=get_data(filters)
         return columns, data
 
 def get_columns():
