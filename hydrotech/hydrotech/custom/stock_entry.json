@@ -30,7 +30,7 @@
    "report": 1,
    "role": "Stock Manager",
    "set_user_permissions": 1,
-   "share": 1,
+   "share": 0,
    "submit": 1,
    "write": 1
   },

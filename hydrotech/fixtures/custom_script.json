@@ -1,1 +1,24 @@
-[]
+[
+ {
+  "docstatus": 0,
+  "doctype": "Custom Script",
+  "dt": "Salary Structure Assignment",
+  "modified": "2020-04-15 22:17:19.642736",
+  "name": "Salary Structure Assignment-Client",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on('Salary Structure Assignment',  {\n    refresh: function(frm) {\n\t\t// your code here\n\t\tfrm.doc.ht_gross_salary = frm.doc.base + frm.doc.ht_housing_allowance + frm.doc.ht_food_allowance + frm.doc.ht_transportation_allowance;\n\t\tfrm.doc.ht_maximum_monthly_deduction=frm.doc.base*0.40;\n\t}\n});"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom Script",
+  "dt": "Additional Salary",
+  "modified": "2020-04-15 22:58:59.174864",
+  "name": "Additional Salary-Client",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on('Additional Salary', {\n\tsetup(frm) {\n\t\t// your code here\n\t\tcur_frm.set_query(\"ht_ssa\", function(doc) {\n\t\t    return {\n\t\t        filters: {\n\t\t            \"employee\": cur_frm.doc.employee\n\t\t        }\n\t\t    };\n\t\t}\n\t\t);\n\t\t\n\t},\n\temployee(frm){\n\t\t    //this will fetch and set the most recent assignment.\n        frappe.db.get_link_options('Salary Structure Assignment', '',\n            {\n\t\t\t\temployee: cur_frm.doc.employee\n\t\t\t}\n\t\t).then(all_ssa =>{\n\t\t    frm.set_value(\"ht_ssa\", all_ssa[0].value);\n\t\t});\n\t},\n\t\n\tvalidate(frm){\n\t    if(frm.doc.salary_component==\"Over Time\"){\n\t        frm.doc.ht_basic_salary_per_hour=frm.doc.ht_ind_basic_salary/240;\n\t        frm.doc.amount=frm.doc.ht_overtime_hours*frm.doc.ht_overtime_rate_per_hour*frm.doc.ht_basic_salary_per_hour;\n\t    }\n\t}\n\t\n}\n\n\n\n);\n"
+ }
+]

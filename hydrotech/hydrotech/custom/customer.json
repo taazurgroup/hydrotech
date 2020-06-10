@@ -391,7 +391,7 @@
    "_user_tags": null,
    "amend": 0,
    "cancel": 0,
-   "create": 0,
+   "create": 1,
    "creation": "2013-06-11 14:26:44",
    "delete": 0,
    "docstatus": 0,
@@ -415,7 +415,7 @@
    "set_user_permissions": 0,
    "share": 0,
    "submit": 0,
-   "write": 0
+   "write": 1
   },
   {
    "_assign": null,
@@ -530,7 +530,7 @@
    "email": 0,
    "export": 0,
    "idx": 1,
-   "if_owner": 0,
+   "if_owner": 1,
    "import": 0,
    "modified": "2020-03-25 12:24:21.540551",
    "modified_by": "j.winsly@hydrotechglobal.com",
@@ -547,7 +547,7 @@
    "set_user_permissions": 0,
    "share": 0,
    "submit": 0,
-   "write": 0
+   "write": 1
   },
   {
    "_assign": null,
@@ -613,7 +613,7 @@
    "set_user_permissions": 0,
    "share": 0,
    "submit": 0,
-   "write": 0
+   "write": 1
   },
   {
    "_assign": null,

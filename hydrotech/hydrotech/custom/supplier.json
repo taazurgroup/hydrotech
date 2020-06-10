@@ -193,7 +193,7 @@
    "_user_tags": null,
    "amend": 0,
    "cancel": 0,
-   "create": 0,
+   "create": 1,
    "creation": "2013-01-10 16:34:11",
    "delete": 0,
    "docstatus": 0,
@@ -217,7 +217,7 @@
    "set_user_permissions": 0,
    "share": 0,
    "submit": 0,
-   "write": 0
+   "write": 1
   },
   {
    "_assign": null,
@@ -292,9 +292,9 @@
    "_user_tags": null,
    "amend": 0,
    "cancel": 0,
-   "create": 1,
+   "create": 0,
    "creation": "2020-04-01 21:45:47.275085",
-   "delete": 1,
+   "delete": 0,
    "docstatus": 0,
    "email": 0,
    "export": 1,
@@ -316,7 +316,7 @@
    "set_user_permissions": 0,
    "share": 0,
    "submit": 0,
-   "write": 1
+   "write": 0
   }
  ],
  "doctype": "Supplier",
