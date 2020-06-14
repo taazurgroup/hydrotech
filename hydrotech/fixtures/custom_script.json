@@ -2,6 +2,17 @@
  {
   "docstatus": 0,
   "doctype": "Custom Script",
+  "dt": "Item",
+  "modified": "2020-06-08 09:01:52.715753",
+  "name": "Item-Client",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": ""
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom Script",
   "dt": "Salary Structure Assignment",
   "modified": "2020-04-15 22:17:19.642736",
   "name": "Salary Structure Assignment-Client",

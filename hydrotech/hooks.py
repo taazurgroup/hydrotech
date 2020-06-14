@@ -87,6 +87,14 @@ app_license = "MIT"
 #	}
 # }
 
+doc_events = {
+
+ 	"BOM": 
+    {
+        "autoname": "hydrotech.hooks_call.bom.custom_autoname"
+    }
+}
+
 # Scheduled Tasks
 # ---------------
 
