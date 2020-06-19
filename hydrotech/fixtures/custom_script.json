@@ -31,5 +31,27 @@
   "parentfield": null,
   "parenttype": null,
   "script": "frappe.ui.form.on('Additional Salary', {\n\tsetup(frm) {\n\t\t// your code here\n\t\tcur_frm.set_query(\"ht_ssa\", function(doc) {\n\t\t    return {\n\t\t        filters: {\n\t\t            \"employee\": cur_frm.doc.employee\n\t\t        }\n\t\t    };\n\t\t}\n\t\t);\n\t\t\n\t},\n\temployee(frm){\n\t\t    //this will fetch and set the most recent assignment.\n        frappe.db.get_link_options('Salary Structure Assignment', '',\n            {\n\t\t\t\temployee: cur_frm.doc.employee\n\t\t\t}\n\t\t).then(all_ssa =>{\n\t\t    frm.set_value(\"ht_ssa\", all_ssa[0].value);\n\t\t});\n\t},\n\t\n\tvalidate(frm){\n\t    if(frm.doc.salary_component==\"Over Time\"){\n\t        frm.doc.ht_basic_salary_per_hour=frm.doc.ht_ind_basic_salary/240;\n\t        frm.doc.amount=frm.doc.ht_overtime_hours*frm.doc.ht_overtime_rate_per_hour*frm.doc.ht_basic_salary_per_hour;\n\t    }\n\t}\n\t\n}\n\n\n\n);\n"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom Script",
+  "dt": "BOM",
+  "modified": "2020-06-18 12:13:57.221716",
+  "name": "BOM-Client",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on('BOM', {\n\trefresh(frm) {\n\t\t// your code here\n\t\tfrm.doc.ht_total_cost_per_item=frm.doc.total_cost/frm.doc.quantity;\n\t}\n});"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom Script",
+  "dt": "Sales Invoice",
+  "modified": "2020-06-19 21:25:36.731572",
+  "name": "Sales Invoice-Client",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on('Sales Invoice',  {\n    validate: function(frm) {\n        // calculate incentives for each person on the deal\n        $.each(frm.doc.items,  function(i,  d) {\n            if(d.qty > d.ht_sk_or_ha_qty && d.ht_bom_no){\n            msgprint('Invoice Qty should be less than Ordered Qty');\n            validated = false;\n        }});\n    } \n});\n//d.ht_sk_or_ha_qty"
  }
 ]
